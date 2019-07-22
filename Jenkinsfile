@@ -4,7 +4,7 @@ pipeline {
     stage('Trigger Bitrise') {
       steps {
         sh '''#Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+sh$(/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)")
 
 brew --version
 
