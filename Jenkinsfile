@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('Trigger Bitrise') {
       steps {
-        sh '''#Install Homebrew
+        sh '''sudo chown -R $(whoami) $(brew --prefix)/*
+
+#Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew --version
