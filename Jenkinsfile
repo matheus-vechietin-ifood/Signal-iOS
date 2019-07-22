@@ -6,10 +6,7 @@ pipeline {
         sh '''curl -X POST -H "Authorization: cWYAFthA_XT-2ZEkUlUr-5D5JULuHkGbGvb-V0eKd5Kfkm_W8uW-k1nFp7LwDVygWtOI2A5el1SyM2WUdP61hA" "https://api.bitrise.io/v0.1/apps/8367a773e7be4f36/builds" -d \'{"hook_info":{"type":"bitrise"},"build_params":{"branch":"release/2.40.1"}}\' > trigger_response.json
 pwd
 ls -la
-
-pacman -S jshon
-jshon --version
-jshon -t < trigger_response.json'''
+brew --version'''
       }
     }
   }
